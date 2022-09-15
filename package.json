@@ -2,6 +2,7 @@
   "name": "vscode-color-picker-change",
   "displayName": "vscode-color-picker-change",
   "icon": "https://i.imgur.com/Pe85vxw.png",
+  "repository": "https://github.com/saurabhkhirwal/vscode-color-picker",
   "publisher": "Saurabh Khirwal",
   "description": "(AntiAntiSepticeye's extension, added support for #rgb) let's you use vscode's css color picker in other documents ",
   "version": "0.1.0",
