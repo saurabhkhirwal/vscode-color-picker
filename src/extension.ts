@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import Color from './color';
-import parse from 'parse-css-color';
+import * as parse from 'parse-css-color';
 
 interface Match {
 	color: vscode.Color;

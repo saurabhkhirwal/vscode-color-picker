@@ -1,10 +1,10 @@
 {
-  "name": "vscode-color-picker",
-  "displayName": "vscode-color-picker",
-  "icon":"https://i.imgur.com/Pe85vxw.png",
-  "publisher": "AntiAntiSepticeye",
-  "description": "let's you use vscode's css color picker in other documents",
-  "version": "0.0.3",
+  "name": "vscode-color-picker-change",
+  "displayName": "vscode-color-picker-change",
+  "icon": "https://i.imgur.com/Pe85vxw.png",
+  "publisher": "Saurabh Khirwal",
+  "description": "(AntiAntiSepticeye's extension, added support for #rgb) let's you use vscode's css color picker in other documents ",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.62.0"
   },
@@ -15,21 +15,32 @@
     "*"
   ],
   "main": "./dist/extension.js",
-	"contributes": {
-		"configuration": {
-			"title": "vscode-color-picker",
-			"properties": {
-			  "vscode-color-picker.languages": {
-				"type": "array",
-				"default": ["python", "javascript", "typescript"],
-				"description": "Set languages to be detected by the extension"
-			  }
-			}
-		}
-	},
-	"capabilities": {
-		"colorProvider": "true"
-	},
+  "contributes": {
+    "configuration": {
+      "title": "vscode-color-picker",
+      "properties": {
+        "vscode-color-picker.languages": {
+          "type": "array",
+          "default": [
+            "php",
+            "html",
+            "css",
+            "python",
+            "jsonc",
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+            "vue"
+          ],
+          "description": "Set languages to be detected by the extension"
+        }
+      }
+    }
+  },
+  "capabilities": {
+    "colorProvider": "true"
+  },
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
@@ -49,6 +60,7 @@
     "@typescript-eslint/eslint-plugin": "^5.1.0",
     "@typescript-eslint/parser": "^5.1.0",
     "@vscode/test-electron": "^1.6.2",
+    "esbuild": "^0.15.7",
     "eslint": "^8.1.0",
     "glob": "^7.1.7",
     "mocha": "^9.1.3",
@@ -58,6 +70,6 @@
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "parse-css-color": "^0.1.2"
+    "parse-css-color": "^0.2.1"
   }
 }
